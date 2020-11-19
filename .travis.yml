@@ -6,7 +6,6 @@ branches:
   - master
 before_script: 
   - cp -rfv docs/_includes .
-  - rm -rf Gemfile.lock
 script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
 deploy:
   provider: pages
