@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://brunoprocopio.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://brunoprocopio.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-19T17:38:24-03:00</updated><id>https://brunoprocopio.dev/feed.xml</id><title type="html">Bruno Procopio</title><subtitle>Bruno Procopio's personal blog about software development.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://brunoprocopio.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://brunoprocopio.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-19T19:03:57-03:00</updated><id>https://brunoprocopio.dev/feed.xml</id><title type="html">Bruno Procopio</title><subtitle>Bruno Procopio's personal blog about software development.
 </subtitle><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><entry><title type="html">React 101 (by a back-end developer)</title><link href="https://brunoprocopio.dev/2020/11/19/react-101.html" rel="alternate" type="text/html" title="React 101 (by a back-end developer)" /><published>2020-11-19T00:00:00-03:00</published><updated>2020-11-19T00:00:00-03:00</updated><id>https://brunoprocopio.dev/2020/11/19/react-101</id><content type="html" xml:base="https://brunoprocopio.dev/2020/11/19/react-101.html">&lt;p&gt;What I learned as a back-end developer trying to use React from scratch.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -7,4 +7,17 @@
 
 &lt;p&gt;A common association that I make is that just like when I’m building an API using Node, I usually use Express.js to make my life easier, to help me building UIs I will use a framework (or library, in that case). React is that, a library with all the work done for us developers to worry not about how to handle each component on the page, but in our application design and architecture. In resume, we should worry about how our data will behave, in how our objects state will be updated, and not in how these information will be presented to the user.&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><category term="React" /><category term="JavaScript" /><summary type="html">What I learned as a back-end developer trying to use React from scratch.</summary></entry></feed>
+&lt;p&gt;I asked myself: “Why should I start studying React?”. So I came to two main reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;React is made in JavaScript (and supports TypeScript), which in my case makes total sense considering that I work with JS daily, so I don’t need to study a lot of extra steps to start running it, and can focus on my UI and front-end studies.&lt;/li&gt;
+  &lt;li&gt;Taking this in account, my next step was the old and good Google search “front-end framework js”. The main results are:
+    &lt;ul&gt;
+      &lt;li&gt;React&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-11-19/react-google-search.png&quot; alt=&quot;Google search of react js&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-11-19/react-github-repo.png&quot; alt=&quot;Github repo of react&amp;quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><category term="React" /><category term="TypeScript" /><category term="JavaScript" /><summary type="html">What I learned as a back-end developer trying to use React from scratch.</summary></entry></feed>
