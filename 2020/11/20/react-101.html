@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>React 101 (by a back-end developer) - Bruno Procopio</title>
 
 <meta name="description" content="What I learned as a back-end developer trying to use React from scratch.">
-<link rel="canonical" href="https://brunoprocopio.dev/2020/11/19/react-101.html"><link rel="alternate" type="application/rss+xml" title="Bruno Procopio" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="canonical" href="https://brunoprocopio.dev/2020/11/20/react-101.html"><link rel="alternate" type="application/rss+xml" title="Bruno Procopio" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -281,8 +281,8 @@
             </li><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=JavaScript">JavaScript</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 19, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Bruno Procopio"/><meta itemprop="datePublished" content="2020-11-19T00:00:00-03:00">
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 20, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Bruno Procopio"/><meta itemprop="datePublished" content="2020-11-20T00:00:00-03:00">
     <meta itemprop="keywords" content="React,TypeScript,JavaScript"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
@@ -290,25 +290,382 @@
 
 <!--more-->
 
+<p>If you want to skip the introduction, you can jump <a href="#first-steps">here</a>.</p>
+
 <h2 id="what-is-react-and-why-should-i-use-it">What is React and why should I use it?</h2>
 
-<p>A common association that I make is that just like when I’m building an API using Node, I usually use Express.js to make my life easier, to help me building UIs I will use a framework (or library, in that case). React is that, a library with all the work done for us developers to worry not about how to handle each component on the page, but in our application design and architecture. In resume, we should worry about how our data will behave, in how our objects state will be updated, and not in how these information will be presented to the user.</p>
+<p>A common association that I make is that just like when I’m building an API using Node, I usually use <a href="https://expressjs.com">Express.js</a> to make my life easier, to help me build UIs I will use a framework (or library, in that case). That is what React is, a library with all the work done for us developers to worry not about how to handle each component on the page, but with our application design and architecture. In resume, we should worry about how our data will behave, how our objects state will be updated, and not how these informations will be presented to the user.</p>
 
 <p>I asked myself: “Why should I start studying React?”. So I came to two main reasons:</p>
 
 <ol>
   <li>React is made in JavaScript (and supports TypeScript), which in my case makes total sense considering that I work with JS daily, so I don’t need to study a lot of extra steps to start running it, and can focus on my UI and front-end studies.</li>
-  <li>Taking this in account, my next step was the old and good Google search “front-end framework js”. The main results are:
+  <li>Taking this in account, my next step was the good old Google search “front-end framework js”. The main results are:
     <ul>
-      <li>React</li>
+      <li>React<br /><img src="/assets/images/posts/2020-11-20/react-google-search.png" alt="Google search of react js" /><br /><img src="/assets/images/posts/2020-11-20/react-github-repo.png" alt="Github repo of react&quot;" /> </li>
+      <li>Vue.js<br /><img src="/assets/images/posts/2020-11-20/vue-google-search.png" alt="Google search of vue js" /><br /><img src="/assets/images/posts/2020-11-20/vue-github-repo.png" alt="Github repo of vue&quot;" /> </li>
+      <li>AngularJS<br /><img src="/assets/images/posts/2020-11-20/angular-google-search.png" alt="Google search of angular js" /><br /><img src="/assets/images/posts/2020-11-20/angular-github-repo.png" alt="Github repo of angular&quot;" /> </li>
+      <li>jQuery<br /><img src="/assets/images/posts/2020-11-20/jquery-google-search.png" alt="Google search of jquery" /><br /><img src="/assets/images/posts/2020-11-20/jquery-github-repo.png" alt="Github repo of jquery&quot;" /> </li>
     </ul>
   </li>
 </ol>
 
-<p><img src="/assets/images/posts/2020-11-19/react-google-search.png" alt="Google search of react js" /></p>
+<p>I chose React mainly because of its popularity and number of results on Google, so I think that if I step on any problem, probably I will find answers easily. This reason usually works fine for me, since I like to learn by trying new stuff and solving problems as they appear. If you’re looking for a new job or something like that, positions requiring React are more often requested than the other examples.</p>
 
-<p><img src="/assets/images/posts/2020-11-19/react-github-repo.png" alt="Github repo of react&quot;" /></p>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-11-19T00:00:00-03:00"><!-- start custom article footer snippet -->
+<h2 id="about-this-and-future-articles">About this (and future) articles</h2>
+
+<p>I’ll try to be as didatic as possible, but I’ll assume that you have a basic knowledge on Node and HTML/CSS. For that reason, maybe you’ll face some challenge over a concept or something that has not been explored yet, but fell free to contact me on any plataform linked bellow.</p>
+
+<h2 id="a-brief-history-of-react">A brief history of React</h2>
+
+<p>React was develop by Facebook and officially launched on 2013. The main difference (and core) of this library is to optimize the DOM manipulation, which is a very expensive operation for the browser. The idea is to keep the application state cached and only update the DOM on state changes, and only the objects affected by the update.</p>
+
+<p>The focus of this article is not to explore how the React works in its deepness, but i recommend these two articles for anyone looking for more details.</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></p>
+
+<p><a href="https://thenewstack.io/javascripts-history-and-how-it-led-to-reactjs/">JavaScript’s History and How it Led to ReactJS</a></p>
+
+<h2 id="first-steps">First steps</h2>
+
+<p>The only thing that you’ll need to start working with React is Node installed on your machine.</p>
+
+<p class="info">Node version: v12.19.1 <br />
+Yarn version: 1.22.5</p>
+
+<p>React has an util named “Create React App”, develop and officially maintained by Facebook.</p>
+
+<p><a href="https://github.com/facebook/create-react-app">Create React App</a></p>
+
+<p>It’s a simple option for starting coding a React app, so I’ll use it for my initial studies. The first thing to do is install it. I’ll begin doing it with Yarn, and installing it globally on my machine.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn global add create-react-app
+</code></pre></div></div>
+
+<p>Then, I’ll create my test application. The command is:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create-react-app &lt;app-name&gt; <span class="nt">--template</span> typescript
+</code></pre></div></div>
+<p class="info">app-name: Your application name, here I’ll use <strong>my-react-app</strong>. It will also be the name of the new created folder.</p>
+
+<p class="warning">By default, the package manager is <strong>yarn</strong>. If you rather use <strong>npm</strong>, you can use the flag -use-npm, like that:<br /><code class="language-plaintext highlighter-rouge">create-react-app &lt;app-name&gt; --use-npm</code></p>
+
+<p>Also, I’ll use TypeScript instead of plain JavaScript. This is a new feature on the version 4.0.0, so check if you’re using the most recent version if anything breaks.</p>
+
+<p>The project structure is the following:</p>
+
+<p><img src="/assets/images/posts/2020-11-20/project-structure.png" alt="Project structure" /></p>
+
+<ul>
+  <li>node_modules: Project dependencies. By default, everything that React needs to work is already imported here.</li>
+  <li>public: Public static files. Generally, you’ll put here common files between the project pages, like when you’re following MVC prerrogatives.
+    <ul>
+      <li>index.html: Initial application page template.</li>
+      <li>favicon.ico: Icon used by browser tab.<br />
+<img src="/assets/images/posts/2020-11-20/icon.png" alt="Icon example" /></li>
+      <li>manifest.json: PWA configuration for sites that can be installed on mobile without any app store. For more information, see here: <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web Manifest</a>.</li>
+      <li>logo*.png: Logos used by manifest.json.</li>
+      <li>robots.txt: Configuration for webcrawlers and search engine robots (like googlebot).</li>
+    </ul>
+  </li>
+  <li>src: Application source code.
+    <ul>
+      <li>App.css and index.css: Style files.</li>
+      <li>logo.svg: The same logo that on /public/, but on svg format.</li>
+      <li>react-app-env.d.ts: Created by create-react-app, adds support to import image files like svg, png, jpg, among others. Do not delete it to avoid further import problems. This file is a type definition for projects created with create-react-app.</li>
+      <li>reportWebVitals.ts: Scripts to report Web Vitals. Web Vitals are an advanced topic that I’m looking to explore in the future, but if you want to understand a little bit about it i recommend this overview: <a href="https://web.dev/vitals/">Web Vitals</a>.</li>
+      <li>setupTests.ts: Libs for tests.</li>
+      <li>App.test.ts: Tests for App.tsx.</li>
+      <li>App.tsx e index.tsx: Source codes of the app, basically a hello-world. On the next section I’ll explain how the application works.</li>
+    </ul>
+  </li>
+  <li>.gitignore: Files ignored by git.</li>
+  <li>package.json: Project configuration, like scripts, dependencies, version and description.</li>
+  <li>tsconfig.json: Compilation/Traspilation configuration (for TypeScript).</li>
+  <li>yarn.lock: Lockfile generated by yarn (if you’re using npm, this file will be actually the package-lock.json).</li>
+  <li>README.md: Default React Read-me, explaining how to start, test and build the app.</li>
+</ul>
+
+<p>The next step is to start the development server:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn start
+</code></pre></div></div>
+
+<p>The browser will be opened and you’ll see something like this on terminal:</p>
+
+<p><img src="/assets/images/posts/2020-11-20/terminal.png" alt="Terminal" /></p>
+
+<p>And on browser:</p>
+
+<p><img src="/assets/images/posts/2020-11-20/browser.png" alt="Browser" /></p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>Summing up, when we execute <strong>yarn start</strong> a server is started on port 3000, for our HTML files. By default the file <strong>index.html</strong> will be the root file on the URL <strong>http://localhost:3000</strong>. The <em>yarn start</em>, which is actually the command <strong>react-scripts start</strong>, has a <em>hot reload</em> feature, so we doesn’t have to stop and start the server everytime a file is changed. It’s pretty much like <a href="https://www.npmjs.com/package/nodemon">nodemon</a>. Let’s take a look on the <em>index.html</em>:</p>
+
+<p class="success">index.html</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">href=</span><span class="s">"%PUBLIC_URL%/favicon.ico"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#000000"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span>
+      <span class="na">name=</span><span class="s">"description"</span>
+      <span class="na">content=</span><span class="s">"Web site created using create-react-app"</span>
+    <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"%PUBLIC_URL%/logo192.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"%PUBLIC_URL%/manifest.json"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>React App<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;noscript&gt;</span>You need to enable JavaScript to run this app.<span class="nt">&lt;/noscript&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>What we’ll look here is the <em>body</em>. There is a div with id <strong>root</strong>, where our code will be injected by React. This is done like this:</p>
+
+<p class="success">index.tsx</p>
+
+<figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./index.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">reportWebVitals</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./reportWebVitals</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="p">&lt;</span><span class="nc">React</span><span class="p">.</span><span class="nc">StrictMode</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">React</span><span class="p">.</span><span class="nc">StrictMode</span><span class="p">&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="nx">reportWebVitals</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The <strong>ReactDOM</strong> is the package that manipulates the page DOM. On the method <strong>render</strong> it renders a React object on the DOM element passed by argument. In this case, what we are saying is that we want the <strong>App</strong> to be rendered on the DOM (HTML) element <strong>root</strong>.</p>
+
+<p><strong>App</strong> is a function defined on App.tsx, like this:</p>
+
+<p class="success">App.tsx</p>
+
+<figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">logo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./logo.svg</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"App"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">header</span> <span class="na">className</span><span class="p">=</span><span class="s">"App-header"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">logo</span><span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">"App-logo"</span> <span class="na">alt</span><span class="p">=</span><span class="s">"logo"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+          Edit <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>src/App.tsx<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> and save to reload.
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span>
+          <span class="na">className</span><span class="p">=</span><span class="s">"App-link"</span>
+          <span class="na">href</span><span class="p">=</span><span class="s">"https://reactjs.org"</span>
+          <span class="na">target</span><span class="p">=</span><span class="s">"_blank"</span>
+          <span class="na">rel</span><span class="p">=</span><span class="s">"noopener noreferrer"</span>
+        <span class="p">&gt;</span>
+          Learn React
+        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The goal with React is to build my app with <strong>components</strong>. These components are built using declarative code, and they work as an abstraction to the developer so they doesn’t have the responsabillity to update how the components state reflects on the UI. React does this for us.</p>
+
+<p>Now we are going to create our first component, called <strong>Hello World</strong>. This could be anything, a table with the products of our application, a label with a custom text, or anything we might need. Let’s update index.html to:</p>
+
+<p class="success">indext.html</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">href=</span><span class="s">"%PUBLIC_URL%/favicon.ico"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#000000"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span>
+      <span class="na">name=</span><span class="s">"description"</span>
+      <span class="na">content=</span><span class="s">"Web site created using create-react-app"</span>
+    <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"%PUBLIC_URL%/logo192.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"%PUBLIC_URL%/manifest.json"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>React App<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;noscript&gt;</span>You need to enable JavaScript to run this app.<span class="nt">&lt;/noscript&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"helloWorld"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Let’s also create a new file called <strong>HelloWorld.tsx</strong>, on src folder.</p>
+
+<p class="success">src/HelloWorld.tsx</p>
+
+<figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">HelloWorld</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        Hello World.
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">HelloWorld</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>On <strong>index.tsx</strong>, let’s use the new component:</p>
+
+<p class="success">index.tsx</p>
+
+<figure class="highlight"><pre><code class="language-jsx" data-lang="jsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./index.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">reportWebVitals</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./reportWebVitals</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">HelloWorld</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./HelloWorld</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="p">&lt;</span><span class="nc">React</span><span class="p">.</span><span class="nc">StrictMode</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">HelloWorld</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">React</span><span class="p">.</span><span class="nc">StrictMode</span><span class="p">&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">helloWorld</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The result is this (on the browser):</p>
+
+<p><img src="/assets/images/posts/2020-11-20/hello-world.png" alt="Hello World" /></p>
+
+<p>Over the next articles, I want to look deeper on key concepts of React as I use them on real-world applications. Some of the topics that I’m thinking of are:</p>
+
+<ul>
+  <li>Component Life Cicle</li>
+  <li>Props vs State</li>
+  <li>Hooks</li>
+  <li>Composition vs Inheritance</li>
+</ul>
+
+<p>If you want more info about Create React App, check the <a href="https://create-react-app.dev/docs/getting-started">official guide</a>.</p>
+
+<p>Thanks for reading and stay tunned!</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-11-20T00:00:00-03:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
