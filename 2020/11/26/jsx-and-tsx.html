@@ -1,22 +1,21 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Home - Bruno Procopio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>What is JSX and TSX - Bruno Procopio</title>
 
-<meta name="description" content="Bruno Procopio's personal blog about software development.
-">
-<link rel="canonical" href="https://brunoprocopio.dev/"><link rel="alternate" type="application/rss+xml" title="Bruno Procopio" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="An introduction on using Typescript with React and how it’s compiled to HTML.">
+<link rel="canonical" href="https://brunoprocopio.dev/2020/11/26/jsx-and-tsx.html"><link rel="alternate" type="application/rss+xml" title="Bruno Procopio" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
 <meta name="theme-color" content="#ffffff">
 <!-- end favicons snippet -->
 <link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- LinkedIn head snippets -->
-<meta name="title" property="og:title" content="">
-<meta property="og:type" content="">
-<meta name="image" property="og:image" content="">
-<meta name="description" property="og:description" content="">
-<meta name="author" content="">
+<meta name="title" property="og:title" content="What is JSX and TSX">
+<meta property="og:type" content="Article">
+<meta name="image" property="og:image" content="https://brunoprocopio.dev/assets/images/posts/2020-11-26/cover.png">
+<meta name="description" property="og:description" content="An introduction on using Typescript with React and how it's compiled to HTML.">
+<meta name="author" content="Bruno Procopio">
 <!-- end LinkedIn head snippets -->
 <script>(function() {
   window.isArray = function(val) {
@@ -260,7 +259,7 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -269,16 +268,7 @@
         <ul><li class="navigation__item"><a href="/archive.html">Archive</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
-</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
-
-              <div class="col-aside d-print-none js-col-aside"></div>
-
-              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
-
-<!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>Home</h1></header><meta itemprop="headline" content="Home"><meta itemprop="author" content="Bruno Procopio"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2020/11/26/jsx-and-tsx.html"><h2 itemprop="headline" class="item__header">What is JSX and TSX</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">An introduction on using Typescript with React and how it’s compiled to HTML.</div><p><a href="/2020/11/26/jsx-and-tsx.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+</div><div class="page__content"><div class="article__header--overlay"><div class="hero hero--dark overlay" style="background-image:linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4)),url(/assets/images/posts/2020-11-26/cover.png);background-color:#203028;"><div class="hero__content"><div class ="main"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=React">React</a>
             </li><li>
@@ -288,31 +278,220 @@
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=JavaScript">JavaScript</a>
             </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 26, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Bruno Procopio"/><meta itemprop="datePublished" content="2020-11-26T00:00:00-03:00">
-    <meta itemprop="keywords" content="React,TypeScript,JavaScript"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2020/11/20/react-101.html"><h2 itemprop="headline" class="item__header">React 101 (by a back-end developer)</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">What I learned as a back-end developer trying to use React from scratch.</div><p><a href="/2020/11/20/react-101.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=React">React</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=TypeScript">TypeScript</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=JavaScript">JavaScript</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 20, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Bruno Procopio"/><meta itemprop="datePublished" content="2020-11-20T00:00:00-03:00">
-    <meta itemprop="keywords" content="React,TypeScript,JavaScript"></div>
-      </article></div>
-</div><div class="layout--home"></div>
-<script>/*(function () {
+            </li></ul></div><div class="article__header"><header><h1>What is JSX and TSX</h1></header></div><p class="overlay__excerpt">An introduction on using Typescript with React and how it’s compiled to HTML.</p></div></div>
+              </div>
+            </div><div class ="main"><div class="grid grid--reverse">
 
-})();*/
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div>
+</aside></div>
+
+              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
+
+<!-- end custom main top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="What is JSX and TSX"><meta itemprop="author" content="Bruno Procopio"/><meta itemprop="datePublished" content="2020-11-26T00:00:00-03:00">
+    <meta itemprop="keywords" content="React,TypeScript,JavaScript"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody"><p>An introduction on using Typescript with React and how it’s compiled to HTML.</p>
+
+<!--more-->
+
+<p>We can face something like this when starting with React:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">world</span><span class="o">&lt;</span><span class="sr">/h1&gt;;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>If you’re familiar with JavaScript, this is a very strange code. It contains <strong>HTML</strong> tags that don’t feel like belonging in this code, but not so much out of the universe that it’s clearly an error.</p>
+
+<p>This is called a <strong>syntax extension</strong> to JavaScript, or how we’ll call it from here onwards, <strong>JSX</strong>. On TypeScript it works in the same way, but we’ll call it <strong>TSX</strong> (<strong>T</strong>ypeScript <strong>S</strong>yntax E<strong>x</strong>tension).</p>
+
+<h2 id="why-jsx">Why JSX?</h2>
+
+<p>As we talked in our previous post, React create components to represent our <a href="https://www.wikiwand.com/en/Separation_of_concerns">concerns</a>. Instead of creating our UI in a separate file of our logic, React keep both of then in a single file, so that each if can represent a component. In resume, you should think that rendering logic is strongly coupled with the UI and the data, therefore it should be written on the same file.</p>
+
+<p>Although, React doesn’t necessary needs JSX files. You can write your code with just plain JavaScript/Typescript, but it’s really unrecommended since JSX provides a visual aid and clearity on your code. You can check an example over <a href="https://reactjs.org/docs/react-without-jsx.html">here</a>.</p>
+
+<h2 id="lets-get-pratical">Let’s get pratical</h2>
+
+<p>Ok, before we move to the next section to undestand how our JSX becomes HTML, let’s start a new project that we’ll use on every post, so we can build a real thing after all. I’ll use here the <a href="/2020/11/20/react-101.html">create-react-app</a> from our previous article and also <a href="https://chakra-ui.com/">Chakra UI</a>, which is a component library so we won’t need to worry about styling and that sort of things.</p>
+
+<p>Chakra has an official create-react-app template, so let’s use it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create-react-app chat-front-end <span class="nt">--template</span> @chakra-ui/typescript
+</code></pre></div></div>
+
+<p class="info"><strong>chat-front-end</strong> is the name of our project. My goal here is to create a simple chat application, but by now it’ll be just a login page.</p>
+
+<p>I’ll create a new file on /src called <strong>Login.tsx</strong>. This is my first component, and will be the first thing the user sees when he start the application.</p>
+
+<figure class="highlight"><pre><code class="language-tsx" data-lang="tsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span>
+<span class="k">import</span> <span class="p">{</span>
+    <span class="nx">Grid</span><span class="p">,</span>
+    <span class="nx">HStack</span><span class="p">,</span>
+    <span class="nx">Input</span><span class="p">,</span>
+    <span class="nx">Button</span><span class="p">,</span>
+<span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@chakra-ui/react</span><span class="dl">"</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">Login</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">Grid</span> <span class="na">p</span><span class="p">=</span><span class="si">{</span><span class="mi">5</span><span class="si">}</span> <span class="na">gap</span><span class="p">=</span><span class="si">{</span><span class="mi">1</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">HStack</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Input</span> <span class="na">placeholder</span><span class="p">=</span><span class="s">"Username"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Input</span> <span class="na">placeholder</span><span class="p">=</span><span class="s">"Password"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nc">HStack</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">justifySelf</span><span class="p">=</span><span class="s">"flex-start"</span><span class="p">&gt;</span>Login<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nc">Grid</span><span class="p">&gt;</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Let’s understand what’s happening here. This is a TypeScript (TSX) file, so what I’m doing is exporting my const <strong>Login</strong>. This will be a React object, an component. This component is composed of a master component <strong>Grid</strong>, with children inside of it which will be the actual implementation of what I want. It’s actually invoking React to render my component like this, as a composition of those Chakra UI’s components.</p>
+
+<p>Now let’s check what each of the components do:</p>
+<ul>
+  <li>Grid: A simple component for a grid layout. More <a href="https://chakra-ui.com/docs/layout/grid">info</a>.</li>
+  <li>HStack: Stack elements horizontally and apply space between them. Here I’m using it to stack my username and password inputs. More <a href="https://chakra-ui.com/docs/layout/stack">info</a>.</li>
+  <li>Input: Textbox for inputing data from the user. More <a href="https://chakra-ui.com/docs/form/input">info</a>.</li>
+  <li>Button: Used to trigger action, for example when the user clicks here. More <a href="https://chakra-ui.com/docs/form/button">info</a>.</li>
+</ul>
+
+<p>With this set, we don’t need to worry about styling or how our form will be rendered, so we can focus in our implementation. We’re also using a third-party library for our components, so we have a generical way of using and reusing our components with ease. The next step is to use our newly created <strong>Login</strong> component. So edit the <strong>App.tsx</strong> to this:</p>
+
+<figure class="highlight"><pre><code class="language-tsx" data-lang="tsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ChakraProvider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@chakra-ui/react</span><span class="dl">"</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Login</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./Login</span><span class="dl">"</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nc">ChakraProvider</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">Login</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">ChakraProvider</span><span class="p">&gt;</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Chakra UI needs this <strong>ChackraProvider</strong> to work properly, so set it at the root of our app. Then we use the Login component we just created. After that, just start the server and you should see the result, our login form:</p>
+
+<p><img src="/assets/images/posts/2020-11-26/login-form.png" alt="Login form" /></p>
+
+<p>The best thing here is that we created a funcional form without worring about the UI, since everything is already implemented. It’s even responsive, give it a try on your browser or cellphone. But how the TSX becomes HTML?</p>
+
+<h2 id="rendering-elements">Rendering elements</h2>
+
+<p>React has a key feature that’s <strong>React DOM</strong>. It’s responsible for handling all elements inside a <strong>node</strong>, which is a HTML element like a div, for example. If we take a look in our code, we can see it on <strong>index.tsx</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-tsx" data-lang="tsx"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">ColorModeScript</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@chakra-ui/react</span><span class="dl">"</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">App</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./App</span><span class="dl">"</span>
+<span class="k">import</span> <span class="nx">reportWebVitals</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./reportWebVitals</span><span class="dl">"</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">serviceWorker</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./serviceWorker</span><span class="dl">"</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="p">&lt;</span><span class="nc">React</span><span class="p">.</span><span class="nc">StrictMode</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">ColorModeScript</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nc">React</span><span class="p">.</span><span class="nc">StrictMode</span><span class="p">&gt;,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">unregister</span><span class="p">()</span>
+<span class="nx">reportWebVitals</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Here, the React DOM is rendering our app on the element called <strong>root</strong>, which is a div on public/index.html.</p>
+
+<p>All elements rendered by React are <strong>immutable</strong>. That means that once it’s created, it can not be changed by anyone, neither its children elements. So, if we need to update anything on the UI, we need to render it again wi ReactDOM.render().</p>
+
+<p>It doesn’t look anything clever, indeed, but there are two points that make it works pretty nice:</p>
+<ol>
+  <li>We don’t have to call ReactDOM.render() all the time, like we’ll see when we get to component states and lifecycle. So, this will only be used one time in our app.</li>
+  <li>React DOM compares the new element with the previous one, and only updates the DOM on the elements that have really changed. Remember that updating DOM is a browser-heavy operation, so it’s optimized with this point in mind.</li>
+</ol>
+
+<p>Summing up, in React creators’ words, <em>thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.</em></p>
+
+<p>Please take a look in the official docs for mor info about <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> and about <a href="https://reactjs.org/docs/rendering-elements.html">rendering</a>. Thanks for reading and stay tunned!</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-11-26T00:00:00-03:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
+</div><div class="article__license"><div class="license">
+    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/11/20/react-101.html">React 101 (by a back-end developer)</a></div></div></div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
 </script>
-
-
-
 </div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
@@ -882,6 +1061,68 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 /*(function () {
 
 })();*/
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
 </script>
     </div>
     <script>(function () {

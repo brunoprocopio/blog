@@ -1,5 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://brunoprocopio.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://brunoprocopio.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-26T00:26:34-03:00</updated><id>https://brunoprocopio.dev/feed.xml</id><title type="html">Bruno Procopio</title><subtitle>Bruno Procopio's personal blog about software development.
-</subtitle><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><entry><title type="html">React 101 (by a back-end developer)</title><link href="https://brunoprocopio.dev/2020/11/20/react-101.html" rel="alternate" type="text/html" title="React 101 (by a back-end developer)" /><published>2020-11-20T00:00:00-03:00</published><updated>2020-11-20T00:00:00-03:00</updated><id>https://brunoprocopio.dev/2020/11/20/react-101</id><content type="html" xml:base="https://brunoprocopio.dev/2020/11/20/react-101.html">&lt;p&gt;What I learned as a back-end developer trying to use React from scratch.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://brunoprocopio.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://brunoprocopio.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-26T20:20:45-03:00</updated><id>https://brunoprocopio.dev/feed.xml</id><title type="html">Bruno Procopio</title><subtitle>Bruno Procopio's personal blog about software development.
+</subtitle><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><entry><title type="html">What is JSX and TSX</title><link href="https://brunoprocopio.dev/2020/11/26/jsx-and-tsx.html" rel="alternate" type="text/html" title="What is JSX and TSX" /><published>2020-11-26T00:00:00-03:00</published><updated>2020-11-26T00:00:00-03:00</updated><id>https://brunoprocopio.dev/2020/11/26/jsx-and-tsx</id><content type="html" xml:base="https://brunoprocopio.dev/2020/11/26/jsx-and-tsx.html">&lt;p&gt;An introduction on using Typescript with React and how it’s compiled to HTML.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We can face something like this when starting with React:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&amp;gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you’re familiar with JavaScript, this is a very strange code. It contains &lt;strong&gt;HTML&lt;/strong&gt; tags that don’t feel like belonging in this code, but not so much out of the universe that it’s clearly an error.&lt;/p&gt;
+
+&lt;p&gt;This is called a &lt;strong&gt;syntax extension&lt;/strong&gt; to JavaScript, or how we’ll call it from here onwards, &lt;strong&gt;JSX&lt;/strong&gt;. On TypeScript it works in the same way, but we’ll call it &lt;strong&gt;TSX&lt;/strong&gt; (&lt;strong&gt;T&lt;/strong&gt;ypeScript &lt;strong&gt;S&lt;/strong&gt;yntax E&lt;strong&gt;x&lt;/strong&gt;tension).&lt;/p&gt;
+
+&lt;h2 id=&quot;why-jsx&quot;&gt;Why JSX?&lt;/h2&gt;
+
+&lt;p&gt;As we talked in our previous post, React create components to represent our &lt;a href=&quot;https://www.wikiwand.com/en/Separation_of_concerns&quot;&gt;concerns&lt;/a&gt;. Instead of creating our UI in a separate file of our logic, React keep both of then in a single file, so that each if can represent a component. In resume, you should think that rendering logic is strongly coupled with the UI and the data, therefore it should be written on the same file.&lt;/p&gt;
+
+&lt;p&gt;Although, React doesn’t necessary needs JSX files. You can write your code with just plain JavaScript/Typescript, but it’s really unrecommended since JSX provides a visual aid and clearity on your code. You can check an example over &lt;a href=&quot;https://reactjs.org/docs/react-without-jsx.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-get-pratical&quot;&gt;Let’s get pratical&lt;/h2&gt;
+
+&lt;p&gt;Ok, before we move to the next section to undestand how our JSX becomes HTML, let’s start a new project that we’ll use on every post, so we can build a real thing after all. I’ll use here the &lt;a href=&quot;/2020/11/20/react-101.html&quot;&gt;create-react-app&lt;/a&gt; from our previous article and also &lt;a href=&quot;https://chakra-ui.com/&quot;&gt;Chakra UI&lt;/a&gt;, which is a component library so we won’t need to worry about styling and that sort of things.&lt;/p&gt;
+
+&lt;p&gt;Chakra has an official create-react-app template, so let’s use it:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;create-react-app chat-front-end &lt;span class=&quot;nt&quot;&gt;--template&lt;/span&gt; @chakra-ui/typescript
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;info&quot;&gt;&lt;strong&gt;chat-front-end&lt;/strong&gt; is the name of our project. My goal here is to create a simple chat application, but by now it’ll be just a login page.&lt;/p&gt;
+
+&lt;p&gt;I’ll create a new file on /src called &lt;strong&gt;Login.tsx&lt;/strong&gt;. This is my first component, and will be the first thing the user sees when he start the application.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-tsx&quot; data-lang=&quot;tsx&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;HStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@chakra-ui/react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Login&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Grid&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Username&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Password&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;justifySelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flex-start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Login&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s understand what’s happening here. This is a TypeScript (TSX) file, so what I’m doing is exporting my const &lt;strong&gt;Login&lt;/strong&gt;. This will be a React object, an component. This component is composed of a master component &lt;strong&gt;Grid&lt;/strong&gt;, with children inside of it which will be the actual implementation of what I want. It’s actually invoking React to render my component like this, as a composition of those Chakra UI’s components.&lt;/p&gt;
+
+&lt;p&gt;Now let’s check what each of the components do:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Grid: A simple component for a grid layout. More &lt;a href=&quot;https://chakra-ui.com/docs/layout/grid&quot;&gt;info&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;HStack: Stack elements horizontally and apply space between them. Here I’m using it to stack my username and password inputs. More &lt;a href=&quot;https://chakra-ui.com/docs/layout/stack&quot;&gt;info&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Input: Textbox for inputing data from the user. More &lt;a href=&quot;https://chakra-ui.com/docs/form/input&quot;&gt;info&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Button: Used to trigger action, for example when the user clicks here. More &lt;a href=&quot;https://chakra-ui.com/docs/form/button&quot;&gt;info&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With this set, we don’t need to worry about styling or how our form will be rendered, so we can focus in our implementation. We’re also using a third-party library for our components, so we have a generical way of using and reusing our components with ease. The next step is to use our newly created &lt;strong&gt;Login&lt;/strong&gt; component. So edit the &lt;strong&gt;App.tsx&lt;/strong&gt; to this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-tsx&quot; data-lang=&quot;tsx&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ChakraProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@chakra-ui/react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Login&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./Login&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ChakraProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Login&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ChakraProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Chakra UI needs this &lt;strong&gt;ChackraProvider&lt;/strong&gt; to work properly, so set it at the root of our app. Then we use the Login component we just created. After that, just start the server and you should see the result, our login form:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-11-26/login-form.png&quot; alt=&quot;Login form&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The best thing here is that we created a funcional form without worring about the UI, since everything is already implemented. It’s even responsive, give it a try on your browser or cellphone. But how the TSX becomes HTML?&lt;/p&gt;
+
+&lt;h2 id=&quot;rendering-elements&quot;&gt;Rendering elements&lt;/h2&gt;
+
+&lt;p&gt;React has a key feature that’s &lt;strong&gt;React DOM&lt;/strong&gt;. It’s responsible for handling all elements inside a &lt;strong&gt;node&lt;/strong&gt;, which is a HTML element like a div, for example. If we take a look in our code, we can see it on &lt;strong&gt;index.tsx&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-tsx&quot; data-lang=&quot;tsx&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ColorModeScript&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@chakra-ui/react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./App&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reportWebVitals&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./reportWebVitals&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceWorker&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./serviceWorker&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;StrictMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ColorModeScript&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;StrictMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;,&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;serviceWorker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;unregister&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;reportWebVitals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the React DOM is rendering our app on the element called &lt;strong&gt;root&lt;/strong&gt;, which is a div on public/index.html.&lt;/p&gt;
+
+&lt;p&gt;All elements rendered by React are &lt;strong&gt;immutable&lt;/strong&gt;. That means that once it’s created, it can not be changed by anyone, neither its children elements. So, if we need to update anything on the UI, we need to render it again wi ReactDOM.render().&lt;/p&gt;
+
+&lt;p&gt;It doesn’t look anything clever, indeed, but there are two points that make it works pretty nice:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;We don’t have to call ReactDOM.render() all the time, like we’ll see when we get to component states and lifecycle. So, this will only be used one time in our app.&lt;/li&gt;
+  &lt;li&gt;React DOM compares the new element with the previous one, and only updates the DOM on the elements that have really changed. Remember that updating DOM is a browser-heavy operation, so it’s optimized with this point in mind.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Summing up, in React creators’ words, &lt;em&gt;thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Please take a look in the official docs for mor info about &lt;a href=&quot;https://reactjs.org/docs/introducing-jsx.html&quot;&gt;JSX&lt;/a&gt; and about &lt;a href=&quot;https://reactjs.org/docs/rendering-elements.html&quot;&gt;rendering&lt;/a&gt;. Thanks for reading and stay tunned!&lt;/p&gt;</content><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><category term="React" /><category term="TypeScript" /><category term="JavaScript" /><summary type="html">An introduction on using Typescript with React and how it’s compiled to HTML.</summary></entry><entry><title type="html">React 101 (by a back-end developer)</title><link href="https://brunoprocopio.dev/2020/11/20/react-101.html" rel="alternate" type="text/html" title="React 101 (by a back-end developer)" /><published>2020-11-20T00:00:00-03:00</published><updated>2020-11-20T00:00:00-03:00</updated><id>https://brunoprocopio.dev/2020/11/20/react-101</id><content type="html" xml:base="https://brunoprocopio.dev/2020/11/20/react-101.html">&lt;p&gt;What I learned as a back-end developer trying to use React from scratch.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
