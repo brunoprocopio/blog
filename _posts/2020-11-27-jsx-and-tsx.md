@@ -130,7 +130,7 @@ reportWebVitals()
 
 Here, the React DOM is rendering our app on the element called **root**, which is a div on public/index.html. 
 
-All elements rendered by React are **immutable**. That means that once it's created, it can not be changed by anyone, neither its children elements. So, if we need to update anything on the UI, we need to render it again wi ReactDOM.render().
+All elements rendered by React are **immutable**. That means that once it's created, it can not be changed by anyone, neither its children elements. So, if we need to update anything on the UI, we need to render it again with ReactDOM.render().
 
 It doesn't look anything clever, indeed, but there are two points that make it works pretty nice:
 1. We don't have to call ReactDOM.render() all the time, like we'll see when we get to component states and lifecycle. So, this will only be used one time in our app.
