@@ -11,12 +11,12 @@ article_header:
   background_color: '#203028'
   background_image:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: assets/images/posts/2020-11-26/cover.png
+    src: assets/images/posts/2020-11-27/cover.png
 # LinkedIn Meta
 linkedin: 
   title: What is JSX and TSX
   type: Article
-  image: https://brunoprocopio.dev/assets/images/posts/2020-11-26/cover.png
+  image: https://brunoprocopio.dev/assets/images/posts/2020-11-27/cover.png
   description: An introduction on using Typescript with React and how it's compiled to HTML.
   author: Bruno Procopio
 ---
@@ -100,7 +100,7 @@ export const App = () => (
 
 Chakra UI needs this **ChackraProvider** to work properly, so set it at the root of our app. Then we use the Login component we just created. After that, just start the server and you should see the result, our login form: 
 
-![Login form](/assets/images/posts/2020-11-26/login-form.png)
+![Login form](/assets/images/posts/2020-11-27/login-form.png)
 
 The best thing here is that we created a funcional form without worring about the UI, since everything is already implemented. It's even responsive, give it a try on your browser or cellphone. But how the TSX becomes HTML?
 
