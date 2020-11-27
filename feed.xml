@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://brunoprocopio.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://brunoprocopio.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-27T15:12:27-03:00</updated><id>https://brunoprocopio.dev/feed.xml</id><title type="html">Bruno Procopio</title><subtitle>Bruno Procopio's personal blog about software development.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://brunoprocopio.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://brunoprocopio.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-27T18:38:10-03:00</updated><id>https://brunoprocopio.dev/feed.xml</id><title type="html">Bruno Procopio</title><subtitle>Bruno Procopio's personal blog about software development.
 </subtitle><author><name>Bruno Procopio</name><email>brunoprocopio59@gmail.com</email></author><entry><title type="html">What is JSX and TSX</title><link href="https://brunoprocopio.dev/2020/11/27/jsx-and-tsx.html" rel="alternate" type="text/html" title="What is JSX and TSX" /><published>2020-11-27T00:00:00-03:00</published><updated>2020-11-27T00:00:00-03:00</updated><id>https://brunoprocopio.dev/2020/11/27/jsx-and-tsx</id><content type="html" xml:base="https://brunoprocopio.dev/2020/11/27/jsx-and-tsx.html">&lt;p&gt;An introduction on using Typescript with React and how it’s compiled to HTML.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -148,7 +148,7 @@
 
 &lt;p&gt;Here, the React DOM is rendering our app on the element called &lt;strong&gt;root&lt;/strong&gt;, which is a div on public/index.html.&lt;/p&gt;
 
-&lt;p&gt;All elements rendered by React are &lt;strong&gt;immutable&lt;/strong&gt;. That means that once it’s created, it can not be changed by anyone, neither its children elements. So, if we need to update anything on the UI, we need to render it again wi ReactDOM.render().&lt;/p&gt;
+&lt;p&gt;All elements rendered by React are &lt;strong&gt;immutable&lt;/strong&gt;. That means that once it’s created, it can not be changed by anyone, neither its children elements. So, if we need to update anything on the UI, we need to render it again with ReactDOM.render().&lt;/p&gt;
 
 &lt;p&gt;It doesn’t look anything clever, indeed, but there are two points that make it works pretty nice:&lt;/p&gt;
 &lt;ol&gt;
