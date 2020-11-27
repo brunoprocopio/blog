@@ -138,4 +138,4 @@ It doesn't look anything clever, indeed, but there are two points that make it w
 
 Summing up, in React creators' words, *thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.*
 
-Please take a look in the official docs for mor info about [JSX](https://reactjs.org/docs/introducing-jsx.html) and about [rendering](https://reactjs.org/docs/rendering-elements.html). Thanks for reading and stay tunned!
+Please take a look in the official docs for more info about [JSX](https://reactjs.org/docs/introducing-jsx.html) and about [rendering](https://reactjs.org/docs/rendering-elements.html). Thanks for reading and stay tunned!
